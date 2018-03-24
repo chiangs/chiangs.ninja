@@ -1,0 +1,18 @@
+@import 'variables';
+
+.content h4,
+.content a {
+  display: inline-block;
+  width: auto;
+  color: $white;
+  padding-bottom: 25px;
+}
+
+h4 {
+  font-style: 20px;
+  font-weight: normal;
+}
+
+h4 .redText {
+  color: $red;
+}

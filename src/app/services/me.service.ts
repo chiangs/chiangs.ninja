@@ -39,10 +39,14 @@ export class MeService {
     this.me.illustratedPic = 'string';
     this.me.livePic = 'string';
     this.me.freelanceStatus = 'string';
-    this.me.tagLine = 'full-stack developer & designer';
+    this.me.tagline = 'Full-stack developer & designer';
     this.me.welcome = 'string';
     this.me.beliefs = 'string';
     this.me.goals = 'string';
     this.me.story = 'string';
+  }
+
+  getMe(): Me {
+    return this.me;
   }
 }

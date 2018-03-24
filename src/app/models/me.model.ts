@@ -18,7 +18,7 @@ export class Me {
   illustratedPic: string;
   livePic: string;
   freelanceStatus: string;
-  tagLine: string;
+  tagline: string;
   welcome: string;
   beliefs: string;
   goals: string;

@@ -10,11 +10,21 @@ import { EmailComponent } from './landing/email/email.component';
 import { DescriptionComponent } from './landing/description/description.component';
 import { ProcessComponent } from './shared/process/process.component';
 import { MenuComponent } from './landing/menu/menu.component';
+import { MeService } from './services/me.service';
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent, NavbarComponent, TitleComponent, EmailComponent, DescriptionComponent, ProcessComponent, MenuComponent],
+  declarations: [
+    AppComponent,
+    LandingComponent,
+    NavbarComponent,
+    TitleComponent,
+    EmailComponent,
+    DescriptionComponent,
+    ProcessComponent,
+    MenuComponent
+  ],
   imports: [BrowserModule, AppRouting],
-  providers: [],
+  providers: [MeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

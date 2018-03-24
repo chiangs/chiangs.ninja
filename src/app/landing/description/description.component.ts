@@ -1,18 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { MeService } from '../../services/me.service';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-description',
   template: `
   <span class="landingS">
-    <img src="./src/assets/images/icon-s.svg" alt="s-icon">
+    <div class="landingIcon">
+      <img src="../../../assets/images/icon-s.svg" alt="s-icon">
+    </div>
+    <div class="tagline">
+      <h2>{{ tagline }}</h2>
+    </div>
   </span>
-  <h2 class="tagLine">{{ me.tagLine }}</h2>
   `,
   styleUrls: ['./description.component.scss']
 })
 export class DescriptionComponent implements OnInit {
-  constructor(private meSvc: MeService) {}
+  @Input() tagline: string;
+  constructor() {}
 
   ngOnInit() {}
 }

@@ -4,7 +4,27 @@
   background-color: $main;
 }
 
+app-title {
+  grid-column: 3 /14;
+  grid-row: 6 / 7;
+}
+
+app-email {
+  grid-column: 3 / 14;
+  grid-row: 7 / 12;
+}
+
 app-description {
-  grid-row: 2 / -1;
-  grid-column: 15 / -1;
+  grid-column: 16 / -1;
+  grid-row: 1 / -1;
+}
+
+app-process {
+  grid-column: 10 / 13;
+  grid-row: 10 / -1;
+}
+
+app-menu {
+  grid-column: 13 / 16;
+  grid-row: 10 / -1;
 }

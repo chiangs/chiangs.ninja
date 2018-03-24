@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-title',
   template: `
-    <p>
-      title works!
-    </p>
+    <h1>
+      <span class="title firstName">{{ firstName }}</span>
+      <span class="title lastName">{{ lastName }}</span>
+    </h1>
   `,
   styleUrls: ['./title.component.scss']
 })
 export class TitleComponent implements OnInit {
+  @Input() firstName: string;
+  @Input() lastName: string;
+  @HostBinding('style.font-size') fontSize = '96px';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
