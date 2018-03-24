@@ -1,4 +1,17 @@
+@import 'variables';
+
 html,
-body {
-  font-size: calc(60% + 0.5vw);
+body,
+view {
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+  color: $text;
+}
+
+.view {
+  height: 100%;
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template: repeat(16, 1fr) / repeat(16, 1fr);
 }

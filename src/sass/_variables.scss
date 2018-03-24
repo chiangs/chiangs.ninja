@@ -2,10 +2,12 @@
 $main: #293040;
 $red: #ee4035;
 $blue: #7ca8b1;
-$white: #fff;
+$white: #ffffff;
 $green: #00c853;
 $pink: #eb3170;
 $grey: #f2f2f2;
+$text: #333333;
+$text-inverted: #ffffff;
 
 // == TYPOGRAPHY
 $fnt-main: 'Montserrat', sans-serif;
@@ -16,6 +18,13 @@ $fnt-main-hv: 900;
 $fnt-labels-hv: 900;
 
 // == DIMENSIONS
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 26px;
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop
+$grid-gap: 3px;
 
 // == SHAPES and RADII
 

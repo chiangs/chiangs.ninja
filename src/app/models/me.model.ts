@@ -3,7 +3,7 @@ export class Me {
   middleName: string;
   lastName: string;
   email: string;
-  phone: number;
+  phone: string;
   linkedin: { icon: string; url: string };
   twitter: { icon: string; url: string };
   instagram: { icon: string; url: string };
@@ -13,11 +13,12 @@ export class Me {
     country: string;
     coordinates: { lat: number; lng: number };
   };
-  company: { name: string; url: string };
-  languages: string[];
+  companies: { name: string; url: string; title: string }[];
+  languages: { lang: string; skillLvl: string }[];
   illustratedPic: string;
   livePic: string;
   freelanceStatus: string;
+  tagLine: string;
   welcome: string;
   beliefs: string;
   goals: string;

@@ -1,0 +1,10 @@
+@import 'variables';
+
+#landing {
+  background-color: $main;
+}
+
+app-description {
+  grid-row: 2 / -1;
+  grid-column: 15 / -1;
+}
