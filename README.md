@@ -1,5 +1,14 @@
 # Chiangs.Ninja
 
+This is a personal portfolio project. I designed it using Figma and wrote it so that anyone who clones this project can insert their own details into the `Me Service` which will populate most of the unique details. Of course, the project and gallery will have to be updated by the new user.
+
+Other technologies used:
+- Figma UI/UX design
+- Semantic UI
+- SASS
+- Google Maps API
+- Lots and lots of CSS Grid and Flexbox
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Development server

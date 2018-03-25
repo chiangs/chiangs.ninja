@@ -1,0 +1,31 @@
+@import 'variables';
+
+html,
+body,
+view {
+  height: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+  color: $text;
+}
+
+html {
+  // Scales by 1px for every 100px from 600px onwards
+  @media (min-width: 600px) {
+    font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+  }
+
+  // Sets font-size to 22px after a viewport of 1000px
+  @media (min-width: 1000px) {
+    font-size: calc(137.5%);
+  }
+}
+
+// base CSS grid
+.view {
+  height: 100%;
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+}
