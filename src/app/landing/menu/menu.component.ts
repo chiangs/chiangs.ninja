@@ -17,6 +17,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   @HostBinding('attr.class') class = 'ui animated link list';
+  @HostBinding('style.z-index') zIndex = 1;
   menuItems: { redText: string; rest: string; url: string }[];
   baseUrl = '/home/';
 

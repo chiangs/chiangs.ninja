@@ -1,5 +1,10 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
-import { Router } from '@angular/router';
+import {
+  Component,
+  OnInit,
+  HostBinding,
+  EventEmitter,
+  Output
+} from '@angular/core';
 
 @Component({
   selector: 'app-email',
@@ -19,9 +24,10 @@ import { Router } from '@angular/router';
 })
 export class EmailComponent implements OnInit {
   @HostBinding('style.position') position = 'relative';
+  @Output() submitPressed: EventEmitter<any> = new EventEmitter();
   submitted: boolean;
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit() {
     this.submitted = false;
@@ -39,11 +45,8 @@ export class EmailComponent implements OnInit {
       setTimeout(() => {
         this.slide('slide1');
         this.slide('slide2');
-        // this.slide('emailSubmit');
       }, 2);
-      // setTimeout(() => {
-      //   this.router.navigate(['about']);
-      // }, 2000);
+      this.submitPressed.emit('email submitted!');
     } else {
       return;
     }
