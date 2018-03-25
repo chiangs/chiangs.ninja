@@ -1,22 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-email',
   template: `
-  <div class="ui right labeled big input" >
-    <label *ngIf="!submitted" for="email" class="ui label">contact me</label>
-    <label *ngIf="submitted" for="email" class="ui label" id="slider">thanks!</label>
+  <div class="ui right labeled big input" id="input">
+    <label for="email" class="ui label" id="label">contact me!</label>
+    <label *ngIf="submitted" class="ui label"  id="slide1">thanks!</label>
     <input placeholder="email@domain" id="email" type="email">
+    <input *ngIf="submitted" placeholder="email@domain" id="slide2" type="email">
     <div class="ui label" id="emailSubmit" (click)="submit()">
-      <p *ngIf="!submitted" class="submitText">submit</p>
-      <i *ngIf="submitted" class="notched circle loading icon"></i>
+        <p *ngIf="!submitted" class="submitText">submit</p>
+        <i *ngIf="submitted" class="notched circle loading icon" id="spinner"></i>
     </div>
   </div>
   `,
   styleUrls: ['./email.component.scss']
 })
 export class EmailComponent implements OnInit {
+  @HostBinding('style.position') position = 'relative';
   submitted: boolean;
 
   constructor(private router: Router) {}
@@ -25,22 +27,27 @@ export class EmailComponent implements OnInit {
     this.submitted = false;
   }
 
-  slide(): void {
-    const slider = document.getElementById('slider');
+  slide(elementId: string): void {
+    const slider = document.getElementById(elementId);
     slider.classList.add('submitted');
   }
 
   // click starts animation, then routes to about
   submit() {
-    this.submitted = true;
-    setTimeout(() => {
-      this.slide();
-    }, 500);
-    // setTimeout(() => {
-    //   this.router.navigate(['about']);
-    // }, 1500);
+    if (!this.submitted) {
+      this.submitted = true;
+      setTimeout(() => {
+        this.slide('slide1');
+        this.slide('slide2');
+        // this.slide('emailSubmit');
+      }, 2);
+      // setTimeout(() => {
+      //   this.router.navigate(['about']);
+      // }, 2000);
+    } else {
+      return;
+    }
   }
 
   // TODO: Disable on invalid
-  // TODO: try animated version of each part of the input instead and stage them 0 - 100%;
 }

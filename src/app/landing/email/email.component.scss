@@ -32,30 +32,51 @@ input {
   margin: 0 auto;
 }
 
+#slide1 {
+  z-index: 1;
+}
+
+#spinner {
+  z-index: 2;
+}
+
 .submitted {
   color: $white !important;
+  font-weight: 400 !important;
   background-color: $green !important;
-  font-weight: 300 !important;
   position: absolute !important;
   width: 100%;
   height: 100%;
-  animation: submitSlide 1s 1 ease-in-out;
+  border-radius: 8px;
+  animation: slide 1s 1 ease-in-out;
 }
 
-@keyframes submitSlide {
+@keyframes slide {
   0% {
     width: 0;
+    opacity: 0;
   }
 
   10% {
     width: 10%;
+    opacity: 35%;
   }
 
   50% {
     width: 50%;
+    opacity: 80%;
+    #label {
+      opacity: 20%;
+    }
   }
 
   100% {
     width: 100%;
+    opacity: 100%;
+    #label {
+      opacity: 0;
+    }
   }
 }
+
+// TODO: MediaQuery for the green slider bar width
