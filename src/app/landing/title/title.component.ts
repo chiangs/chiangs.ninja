@@ -13,7 +13,6 @@ import { Component, OnInit, Input, HostBinding } from '@angular/core';
 export class TitleComponent implements OnInit {
   @Input() firstName: string;
   @Input() lastName: string;
-  @HostBinding('style.font-size') fontSize = '96px';
 
   constructor() {}
 

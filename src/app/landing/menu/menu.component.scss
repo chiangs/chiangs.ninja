@@ -9,7 +9,7 @@
 }
 
 h4 {
-  font-style: 20px;
+  font-size: calc(70% + 4 * (100vw - 600px) / 600);
   font-weight: normal;
 }
 

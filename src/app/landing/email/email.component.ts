@@ -11,13 +11,14 @@ import {
   template: `
   <div class="ui right labeled big input" id="input">
     <label for="email" class="ui label" id="label">contact me!</label>
-    <label *ngIf="submitted" class="ui label"  id="slide1">thanks!</label>
+    <label *ngIf="submitted" for="slide2" class="ui label"  id="slide1">thanks!</label>
     <input placeholder="email@domain" id="email" type="email">
-    <input *ngIf="submitted" placeholder="email@domain" id="slide2" type="email">
-    <div class="ui label" id="emailSubmit" (click)="submit()">
-        <p *ngIf="!submitted" class="submitText">submit</p>
-        <i *ngIf="submitted" class="notched circle loading icon" id="spinner"></i>
+    <input *ngIf="submitted" placeholder="email@domain" id="slide2">
+    <div *ngIf="!submitted" class="ui label" id="emailSubmit" (click)="submit()">
+      <p  class="submitText">submit</p>
     </div>
+    <div *ngIf="submitted" class="ui label" id="emailSubmitted">
+      <i  class="notched circle loading icon" id="spinner"></i>
   </div>
   `,
   styleUrls: ['./email.component.scss']
@@ -46,7 +47,7 @@ export class EmailComponent implements OnInit {
         this.slide('slide1');
         this.slide('slide2');
       }, 2);
-      this.submitPressed.emit('email submitted!');
+      // this.submitPressed.emit('email submitted!');
     } else {
       return;
     }

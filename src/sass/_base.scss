@@ -4,40 +4,23 @@ html,
 body,
 view {
   height: 100%;
+  font-size: 100%;
   box-sizing: border-box;
   margin: 0px;
   color: $text;
 }
 
-// h1 {
-//   font-size: $mod_1 * $mod_1 * $mod_1 * $mod_1 * 1rem;
-//   @include fluid-type(
-//     $min_width,
-//     $max_width,
-//     $mod_1 * $mod_1 * $mod_1 * $min_font,
-//     $mod_2 * $mod_2 * $mod_2 * $min_font
-//   );
-// }
+html {
+  // Scales by 1px for every 100px from 600px onwards
+  @media (min-width: 600px) {
+    font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+  }
 
-// h2 {
-//   font-size: $mod_1 * $mod_1 * $mod_1 * 1rem;
-//   @include fluid-type(
-//     $min_width,
-//     $max_width,
-//     $mod_1 * $mod_1 * $mod_1 * $min_font,
-//     $mod_2 * $mod_2 * $mod_2 * $min_font
-//   );
-// }
-
-// h3 {
-//   font-size: $mod_1 * $mod_1 * 1rem;
-//   @include fluid-type(
-//     $min_width,
-//     $max_width,
-//     $mod_1 * $mod_1 * $min_font,
-//     $mod_2 * $mod_2 * $min_font
-//   );
-// }
+  // Sets font-size to 22px after a viewport of 1000px
+  @media (min-width: 1000px) {
+    font-size: calc(137.5%);
+  }
+}
 
 // base CSS grid
 .view {

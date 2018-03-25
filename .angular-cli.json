@@ -17,8 +17,8 @@
       "prefix": "app",
       "styles": [
         "index.scss",
-        "sass/styles.scss",
-        "../semantic/dist/semantic.min.css"
+        "../semantic/dist/semantic.min.css",
+        "sass/styles.scss"
       ],
       "stylePreprocessorOptions": {
         "includePaths": ["sass"]
