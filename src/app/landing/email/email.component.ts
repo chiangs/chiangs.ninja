@@ -47,7 +47,7 @@ export class EmailComponent implements OnInit {
         this.slide('slide1');
         this.slide('slide2');
       }, 2);
-      // this.submitPressed.emit('email submitted!');
+      this.submitPressed.emit('email submitted!');
     } else {
       return;
     }
