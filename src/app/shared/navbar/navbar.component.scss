@@ -1,0 +1,16 @@
+@import 'variables';
+
+#navbar {
+  color: $white;
+  background-color: $main;
+  ul {
+    list-style: none;
+  }
+  li > a {
+    color: inherit;
+  }
+}
+
+.active {
+  color: $red !important;
+}
