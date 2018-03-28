@@ -3,12 +3,26 @@
 #navbar {
   color: $white;
   background-color: $main;
+  position: absolute;
+  top: 0;
+  width: 100%;
   ul {
     list-style: none;
   }
   li > a {
     color: inherit;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
   }
+}
+
+#navList {
+  display: flex;
+}
+
+.brand {
+  flex: 1;
 }
 
 .active {

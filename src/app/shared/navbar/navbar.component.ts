@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-navbar',
   template: `
   <nav id="navbar">
-    <ul class="navList">
+    <ul id="navList">
         <li class="brand">
           <a [routerLink]="['/welcome']">Brand</a>
         </li>
