@@ -22,9 +22,10 @@ import { Me } from '../../models/me.model';
             <i class="dropdown icon"></i>
             <div class="menu">
               <div class="item" *ngFor="let link of mySocial">
-                <a href="{{ link.url }}" target="_blank">
-                  <i class="{{ link.icon }} icon"></i>{{ link.icon }}
-                </a>
+              <a href="{{ link.url }}" target="_blank">
+                <i class="{{ link.icon }} small circular icon"></i>
+                <span class="socialName">{{ link.icon }}</span>
+              </a>
               </div>
             </div>
         </li>

@@ -52,3 +52,18 @@
 .highlight {
   color: $blue;
 }
+
+.menu {
+  background-color: $main !important;
+  .item a {
+    color: $white !important;
+  }
+  .item a:hover {
+    .socialName {
+      color: $pink !important;
+    }
+  }
+  .item .icon {
+    background-color: $red !important;
+  }
+}
