@@ -17,10 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'projects',
     component: ProjectsComponent,
-    children: [{ path: 'projects/:id/:name', component: ProjectsComponent }]
+    children: [{ path: ':id/:name', component: ProjectsComponent }]
   },
   // { path: 'design', component: DesignComponent, children: [
-  // { path: 'design/:id/:name', component: DesignComponent },
+  // { path: ':id/:name', component: DesignComponent },
   // ] },
   { path: '**', component: ErrorPageComponent }
 ];
