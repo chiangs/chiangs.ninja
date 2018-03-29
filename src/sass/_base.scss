@@ -29,3 +29,13 @@ html {
   grid-gap: $grid-gap;
   grid-template: repeat(16, 1fr) / repeat(16, 1fr);
 }
+
+.firstName {
+  color: $blue;
+  font-weight: 300;
+}
+
+.lastName {
+  color: $white;
+  font-weight: 500;
+}

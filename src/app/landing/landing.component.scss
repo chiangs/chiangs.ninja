@@ -29,6 +29,8 @@ app-menu {
   grid-row: 10 / -1;
 }
 
+// TODO: stack the menu 100% across?
+
 @media screen and(max-width: 600px) {
   app-process {
     grid-column: 6 / 8;

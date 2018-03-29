@@ -3,17 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-about',
   template: `
-    <p>
-      about works!
-    </p>
+    <app-navbar></app-navbar>
   `,
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

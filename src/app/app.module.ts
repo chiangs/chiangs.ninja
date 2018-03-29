@@ -12,6 +12,8 @@ import { ProcessComponent } from './shared/process/process.component';
 import { MenuComponent } from './landing/menu/menu.component';
 import { MeService } from './services/me.service';
 import { AboutComponent } from './about/about.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AboutComponent } from './about/about.component';
     DescriptionComponent,
     ProcessComponent,
     MenuComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectsComponent,
+    ErrorPageComponent
   ],
   imports: [BrowserModule, AppRouting],
   providers: [MeService],

@@ -4,13 +4,3 @@
   font-family: $fnt-main;
   font-size: calc(150% + 20 * (100vw - 600px) / 500);
 }
-
-.firstName {
-  color: $blue;
-  font-weight: 300;
-}
-
-.lastName {
-  color: $white;
-  font-weight: 500;
-}
