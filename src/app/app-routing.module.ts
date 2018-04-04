@@ -5,6 +5,7 @@ import { LandingComponent } from './landing/landing.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { PhotographyComponent } from './photography/photography.component';
 
 const appRoutes: Routes = [
   /* children requires secondary router outlet
@@ -13,7 +14,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   // { path: 'muaythai', component, MuaythaiComponent },
-  // { path: 'photography', component: PhotographyComponent },
+  { path: 'photography', component: PhotographyComponent },
   {
     path: 'projects',
     component: ProjectsComponent,
