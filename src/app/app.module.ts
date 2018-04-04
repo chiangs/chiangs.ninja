@@ -14,6 +14,7 @@ import { MeService } from './services/me.service';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { PhotographyComponent } from './photography/photography.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     MenuComponent,
     AboutComponent,
     ProjectsComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    PhotographyComponent
   ],
   imports: [BrowserModule, AppRouting],
   providers: [MeService],
