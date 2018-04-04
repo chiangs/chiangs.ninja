@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-about',
   template: `
-    <app-navbar></app-navbar>
+  <p>
+    About works!
+  </p>
   `,
   styleUrls: ['./about.component.scss']
 })

@@ -13,10 +13,19 @@ export class MeService {
     this.me.lastName = 'chiang';
     this.me.email = 'stephen.e.chiang@gmail.com';
     this.me.phone = '+47 4122 3902';
-    this.me.linkedin = { icon: 'linkedin', url: 'linkedin.com/in/chiangs' };
-    this.me.twitter = { icon: 'twitter', url: 'twittier.com/chiangse' };
-    this.me.instagram = { icon: 'instagram', url: 'instagram.com/chiangse' };
-    this.me.github = { icon: 'github', url: 'github.com/chiangs' };
+    this.me.linkedin = {
+      icon: 'linkedin',
+      url: 'https://www.linkedin.com/in/chiangs'
+    };
+    this.me.twitter = {
+      icon: 'twitter',
+      url: 'https://www.twitter.com/chiangse'
+    };
+    this.me.instagram = {
+      icon: 'instagram',
+      url: 'https://www.instagram.com/chiangse'
+    };
+    this.me.github = { icon: 'github', url: 'https://www.github.com/chiangs' };
     this.me.location = {
       city: 'stavanger',
       country: 'norway',
