@@ -5,7 +5,7 @@ import { Me } from '../models/me.model';
 @Component({
   selector: 'app-photography',
   template: `
-     <div class="ui center aligned basic segment">
+  <div class="ui center aligned basic segment">
     <div class="container header-grid">
       <div class="titles">
         <h1>{{ title }}</h1>
@@ -17,15 +17,12 @@ import { Me } from '../models/me.model';
       </div>
     </div>
   </div>
-  <div class="container image-grid">
-    <div *ngFor="let photo of gallery" [class]="photo.class">
-      <img [src]="photo.path" [alt]="photo.description">
-    </div>
-  </div>
+  <app-gallery [gallery]="gallery"></app-gallery>
   `,
   styleUrls: ['./photography.component.scss']
 })
 export class PhotographyComponent implements OnInit {
+  isLanding = true;
   me: Me;
   title: string;
   title2: string;
@@ -41,6 +38,12 @@ export class PhotographyComponent implements OnInit {
     this.cta = `This gallery is built with`;
     this.ctaTech = `CSS Grid`;
     this.cta2 = `Play around with the display size and check out the responsiveness as it shuffles the photos to reduce white space!`;
+  }
+  ngOnInit() {
+    this.initGallery();
+  }
+
+  initGallery(): void {
     this.gallery = [
       {
         path: '../../assets/photography/bear-big.jpg',
@@ -149,5 +152,4 @@ export class PhotographyComponent implements OnInit {
       }
     ];
   }
-  ngOnInit() {}
 }
