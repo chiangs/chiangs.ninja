@@ -17,6 +17,6 @@
 
     Standards: HTML5, CSS3, ES6
 
-    Components: Semantic-UI, Google Maps API.
+    Components: Semantic-UI, Google Maps API, Angular.
 
     Software: Visual Studio Code, Chrome Dev Tools, Firefox Dev Edition, AWS EC2, GitHub
